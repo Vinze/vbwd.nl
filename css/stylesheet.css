@@ -3,14 +3,24 @@
     padding: 0;
     vertical-align: baseline;
 }
+
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 body, html {
     height: 100%;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #444;
+}
+
 .centered {
     position: fixed; /* or absolute */
     top: 40%;
@@ -19,7 +29,53 @@ body, html {
     max-width: 640px;
     width: 100%;
     padding: 20px;
+    text-align: center;
 }
+
 .logo {
     max-width: 100%;
+}
+
+.text {
+    display: inline-block;
+    margin-top: 50px;
+}
+.text span {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.text span i.icon {
+    margin-right: 4px;
+}
+
+i.icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: transparent url('../images/sprite.svg') no-repeat top left;
+    background-size: 24px 72px;
+    overflow: hidden;
+}
+i.icon.is-phone {
+    background-position: 0 0;
+}
+i.icon.is-email {
+    background-position: 0 -24px;
+}
+i.icon.is-website {
+    background-position: 0 -48px;
+}
+
+@media only screen and (min-width: 600px) {
+    .text span {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .text span:last-child {
+        margin-right: 0;
+    }
 }
