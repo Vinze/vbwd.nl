@@ -16,7 +16,7 @@ body, html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: #444;
 }
@@ -29,7 +29,6 @@ body {
     max-width: 640px;
     width: 100%;
     padding: 20px;
-    text-align: center;
 }
 
 .logo {
@@ -37,15 +36,15 @@ body {
 }
 
 .text {
-    display: inline-block;
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
+    padding-left: 10px;
 }
-.text span {
+.text div {
     display: block;
     text-align: left;
     margin-bottom: 10px;
 }
-.text span i.icon {
+.text div i.icon {
     margin-right: 4px;
 }
 
@@ -68,14 +67,24 @@ i.icon.is-website {
     background-position: 0 -48px;
 }
 
+.mailto:before {
+    content: attr(data-website) "\0040" attr(data-user);
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
 @media only screen and (min-width: 600px) {
-    .text span {
+    .text {
+        max-width: 370px;
+        padding-left: 0;
+    }
+    .text div {
         display: inline-block;
         margin-right: 20px;
         margin-bottom: 0;
         text-align: center;
     }
-    .text span:last-child {
+    .text div:last-child {
         margin-right: 0;
     }
 }
