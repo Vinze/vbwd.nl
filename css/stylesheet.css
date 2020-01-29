@@ -35,34 +35,41 @@ body {
     max-width: 100%;
 }
 
-.text {
+ul.contact {
+    max-width: 190px;
     margin: 50px auto 0 auto;
-    padding-left: 10px;
+    padding: 0;
+    list-style-type: none;
 }
-.text div {
+
+ul.contact li {
     display: block;
     text-align: left;
     margin-bottom: 10px;
 }
-.text div i.icon {
-    margin-right: 4px;
+
+ul.contact li i.icon {
+    margin-right: 8px;
 }
 
 i.icon {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     width: 24px;
     height: 24px;
     background: transparent url('../images/sprite.svg') no-repeat top left;
     background-size: 24px 72px;
     overflow: hidden;
 }
+
 i.icon.is-phone {
     background-position: 0 0;
 }
+
 i.icon.is-email {
     background-position: 0 -24px;
 }
+
 i.icon.is-website {
     background-position: 0 -48px;
 }
@@ -74,17 +81,19 @@ i.icon.is-website {
 }
 
 @media only screen and (min-width: 600px) {
-    .text {
+    ul.contact {
         max-width: 370px;
         padding-left: 0;
     }
-    .text div {
+
+    ul.contact li {
         display: inline-block;
         margin-right: 20px;
         margin-bottom: 0;
         text-align: center;
     }
-    .text div:last-child {
+
+    ul.contact li:last-child {
         margin-right: 0;
     }
 }
